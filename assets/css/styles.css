@@ -169,3 +169,45 @@ p {
 .footer a:hover {
     color: #fff;
 }
+
+
+.section {
+    padding: 40px;
+    background-color: #f9f9f9;
+}
+
+.scenario-category {
+    margin-bottom: 30px;
+}
+
+.scenario-category h3 {
+    color: #ffcc00;
+    margin-bottom: 20px;
+}
+
+.scenario-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.scenario-card {
+    flex: 1 1 calc(33.333% - 20px);
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.scenario-card img {
+    width: 100%;
+    height: auto;
+}
+
+.scenario-card p {
+    padding: 15px;
+    font-size: 14px;
+    color: #333;
+}
