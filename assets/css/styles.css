@@ -1,0 +1,22 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(to right, #0066cc, #004080);
+}
+
+section h2 {
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+#services i {
+    color: #004080;
+}
+
+footer {
+    background: #004080;
+    color: white;
+}
