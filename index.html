@@ -3,99 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="people sky">
-    <title>PeopleSky</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- FontAwesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <meta name="description" content="PeopleSky - 数字飞行的未来">
+    <title>PeopleSky - 数字飞行解决方案</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="bg-primary text-white text-center py-5">
-        <h1>欢迎来到PeopleSky</h1>
-        <p>展望低空飞行的未来</p>
-    </header>
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <a class="navbar-brand" href="#">PeopleSky</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#about">关于我们</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">服务</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">联系我们</a></li>
-                </ul>
-            </div>
-        </div>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <a href="#" class="logo">PeopleSky</a>
+        <ul>
+            <li><a href="#about">关于我们</a></li>
+            <li><a href="#services">核心服务</a></li>
+            <li><a href="#solutions">解决方案</a></li>
+            <li><a href="#contact">联系我们</a></li>
+        </ul>
     </nav>
 
-    <!-- About Section -->
-    <section id="about" class="py-5 bg-light text-center">
-        <div class="container">
-            <h2>关于我们</h2>
-            <p>我们致力于创建一个服务大众的未来低空经济。</p>
+    <!-- 主标题区域 -->
+    <section class="hero-section">
+        <h1>PeopleSky - 数字飞行的未来</h1>
+        <p>助力全球数字飞行生态系统构建</p>
+        <div class="tab-menu">
+            <a href="#about" class="active">了解我们</a>
+            <a href="#services">核心服务</a>
+            <a href="#contact">联系我们</a>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="py-5 text-center">
+    <!-- 关于我们 -->
+    <section id="about" class="section">
         <div class="container">
-            <h2>我们的服务</h2>
-            <div class="row mt-4">
-                <div class="col-md-4">
-                    <i class="fas fa-plane-departure fa-3x text-primary"></i>
-                    <h4 class="mt-3">航线规划</h4>
-                    <p>创新的高效航线设计工具。</p>
-                </div>
-                <div class="col-md-4">
-                    <i class="fas fa-drone fa-3x text-primary"></i>
-                    <h4 class="mt-3">无人机运营</h4>
-                    <p>安全可扩展的无人机物流解决方案。</p>
-                </div>
-                <div class="col-md-4">
-                    <i class="fas fa-satellite fa-3x text-primary"></i>
-                    <h4 class="mt-3">卫星洞察</h4>
-                    <p>数据驱动的智能空域管理见解。</p>
-                </div>
+            <h2>关于 PeopleSky</h2>
+            <p>PeopleSky 是全球领先的数字飞行技术咨询和系统提供商，致力于通过创新科技解决空域管理和飞行自动化的挑战。我们的使命是构建一个高度自动化、智能化的低空数字飞行生态。</p>
+        </div>
+    </section>
+
+    <!-- 核心服务 -->
+    <section id="services" class="section">
+        <h2>核心服务</h2>
+        <div class="card-container">
+            <div class="card">
+                <h3><i class="fas fa-plane"></i> 数字飞行咨询</h3>
+                <p>提供基于 NASA 数字飞行标准的战略咨询，助力企业实现数字化空域管理。</p>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-brain"></i> 飞行技术开发</h3>
+                <p>开发自动化飞行管理系统，支持动态空域、冲突检测和智能分离。</p>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-network-wired"></i> 系统集成</h3>
+                <p>提供端到端的数字飞行生态系统，包括数据处理、通信网络和态势感知。</p>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-5 bg-light text-center">
-        <div class="container">
-            <h2>联系我们</h2>
-            <p>我们期待听到您的声音！请给我们留言：</p>
-            <form class="mt-4">
-                <div class="row">
-                    <div class="col-md-6 mb-3">
-                        <input type="text" class="form-control" placeholder="您的姓名" required>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <input type="email" class="form-control" placeholder="您的邮箱" required>
-                    </div>
-                </div>
-                <textarea class="form-control mb-3" rows="4" placeholder="您的留言" required></textarea>
-                <button type="submit" class="btn btn-primary">发送消息</button>
-            </form>
+    <!-- 解决方案 -->
+    <section id="solutions" class="section">
+        <h2>数字飞行解决方案</h2>
+        <div class="card-container">
+            <div class="card">
+                <h3><i class="fas fa-cloud"></i> 智能空域管理</h3>
+                <p>结合实时空域动态，提供多无人机环境下的精准空域管理解决方案。</p>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-drone"></i> 无人机操作优化</h3>
+                <p>利用 AI 和大数据优化无人机调度和物流任务执行效率。</p>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-shield-alt"></i> 安全保障技术</h3>
+                <p>基于区块链和分布式系统的安全管理技术，确保飞行任务透明且安全。</p>
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-primary text-white text-center py-3">
-        <p>© 2024 PeopleSky。保留所有权利。</p>
-    </footer>
+    <!-- 联系我们 -->
+    <section id="contact" class="section">
+        <h2>联系我们</h2>
+        <p>我们期待与您合作，共创数字飞行的未来。请留下您的信息：</p>
+        <form class="card">
+            <div class="form-group">
+                <input type="text" placeholder="您的姓名" required>
+            </div>
+            <div class="form-group">
+                <input type="email" placeholder="您的邮箱" required>
+            </div>
+            <div class="form-group">
+                <textarea rows="4" placeholder="您的需求" required></textarea>
+            </div>
+            <button type="submit">提交信息</button>
+        </form>
+    </section>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- 页脚 -->
+    <footer class="footer">
+        <p>© 2024 PeopleSky。致力于数字飞行生态建设。</p>
+        <a href="#">返回顶部</a>
+    </footer>
 </body>
 </html>
