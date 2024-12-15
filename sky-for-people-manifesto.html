@@ -107,23 +107,39 @@
         .footer a:hover {
             text-decoration: underline;
         }
+
+        .navbar-right {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .navbar-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .tagline {
+            color: #fff;
+            font-size: 0.9rem;
+        }
     </style>
 </head>
 <body>
-    <!-- 导航栏 -->
     <!-- 导航栏 -->
     <nav class="navbar">
         <div class="navbar-left">
             <a href="#" class="logo">PeopleSky</a>
             <span class="tagline">低空数字飞行专家</span>
         </div>
-        <ul>
-            <li><a href="sky-for-people.html" class="active">Sky for People</a></li>
-            <li><a href="about.html">关于我们</a></li>
-            <li><a href="services.html">核心服务</a></li>
-            <li><a href="solutions.html">解决方案</a></li>
-            <li><a href="contact.html">联系我们</a></li>
-        </ul>
+        <div class="navbar-right">
+            <a href="sky-for-people.html" class="active">Sky for People</a>
+            <a href="about.html">关于我们</a>
+            <a href="services.html">核心服务</a>
+            <a href="solutions.html">解决方案</a>
+            <a href="contact.html">联系我们</a>
+        </div>
     </nav>
 
     <!-- 主标题区域 -->
