@@ -24,7 +24,7 @@
     <!-- 主标题区域 -->
     <section class="hero-section">
         <h1>联系我们</h1>
-        <p>期待与您探讨低空数字飞行解决方案</p>
+        <p>期待与您探讨低空数字飞��解决方案</p>
     </section>
 
     <!-- 联系我们内容 -->
@@ -34,17 +34,17 @@
             <p>期待与您探讨低空数字飞行解决方案，共创智能化低空飞行未来！</p>
             <div class="card-container">
                 <div class="card">
-                    <form>
+                    <form id="contactForm" onsubmit="handleSubmit(event)">
                         <div class="form-group">
-                            <input type="text" placeholder="您的姓名" required>
+                            <input type="text" id="name" placeholder="您的姓名" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" placeholder="您的邮箱" required>
+                            <input type="email" id="email" placeholder="您的邮箱" required>
                         </div>
                         <div class="form-group">
-                            <textarea rows="4" placeholder="请描述您的需求" required></textarea>
+                            <textarea rows="4" id="message" placeholder="请描述您的需求" required></textarea>
                         </div>
-                        <button type="submit">提交信息</button>
+                        <button type="submit">发送邮件</button>
                     </form>
                 </div>
             </div>
@@ -56,5 +56,25 @@
         <p>© 2024 PeopleSky。专注低空数字飞行解决方案。</p>
         <a href="#">返回顶部</a>
     </footer>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            // 设置收件邮箱地址
+            const toEmail = 'info@peoplesky.net';  // 替换为您的实际邮箱地址
+            
+            // 构建邮件内容
+            const subject = `来自 ${name} 的咨询`;
+            const body = `姓名：${name}%0D%0A邮箱：${email}%0D%0A%0D%0A消息内容：%0D%0A${message}`;
+            
+            // 打开默认邮件客户端
+            window.location.href = `mailto:${toEmail}?subject=${subject}&body=${body}`;
+        }
+    </script>
 </body>
 </html>
