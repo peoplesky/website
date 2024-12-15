@@ -285,45 +285,68 @@ ul li {
 }
 
 /* 移动端导航栏样式 */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.menu-toggle i {
+    font-size: 24px;
+    color: #fff;
+}
+
 @media screen and (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px;
+        position: relative;
+    }
+
     .menu-toggle {
         display: block;
-        cursor: pointer;
-        padding: 10px;
-        color: white;
     }
-    
+
     .nav-links {
         display: none;
-        width: 100%;
         position: absolute;
-        top: 60px;
+        top: 100%; /* 修改为相对于导航栏底部 */
         left: 0;
+        width: 100%;
         background-color: #0044cc;
-        flex-direction: column;
-        padding: 20px 0;
+        padding: 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 999;
     }
-    
+
     .nav-links.active {
-        display: flex;
+        display: block;
     }
-    
+
     .nav-links li {
-        margin: 10px 0;
+        display: block;
+        margin: 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
-    
-    .navbar {
-        padding: 0 20px;
-        position: relative;
+
+    .nav-links li a {
+        padding: 15px 20px;
+        display: block;
+        text-align: left;
+    }
+
+    .nav-links li a:hover {
+        background-color: #003399;
+    }
+
+    .navbar-left {
+        flex: 1;
     }
 }
 
+/* 确保在大屏幕上正常显示 */
 @media screen and (min-width: 769px) {
-    .menu-toggle {
-        display: none;
-    }
-    
     .nav-links {
-        display: flex;
+        display: flex !important;
     }
 }
