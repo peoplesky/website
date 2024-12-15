@@ -6,16 +6,20 @@
     <meta name="description" content="PeopleSky - 提供多样化的数字飞行核心服务">
     <title>核心服务 - PeopleSky</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-    <!-- 导航栏 -->
+    <!-- 修改后的导航栏 -->
     <nav class="navbar">
         <div class="navbar-left">
             <a href="#" class="logo">PeopleSky</a>
             <span class="tagline">低空数字飞行专家</span>
         </div>
-        <ul>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links">
             <li><a href="sky-for-people.html">Sky for People</a></li>
             <li><a href="about.html">关于我们</a></li>
             <li><a href="services.html" class="active">核心服务</a></li>
@@ -59,7 +63,7 @@
                 <ul>
                     <li>整合无人机调度系统与空域管理平台，实现高效协作。</li>
                     <li>部署分布式通信网络和数据存储基础设施，支持大规模并发任务。</li>
-                    <li>集成 AI 和大数据分析功能，为决策提供强大的技术支撑。</li>
+                    <li>集成 AI 和大数据分析功能，为决策提供��大的技术支撑。</li>
                 </ul>
                 <a href="integration.html" class="button">了解详情</a>
             </div>
@@ -134,6 +138,32 @@
             </div>
         </div>
     </section>
+
+    <!-- 添加导航栏响应式JavaScript -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        menuToggle.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+        });
+        
+        // 点击菜单项后自动关闭菜单
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+        
+        // 点击页面其他区域关闭菜单
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.navbar')) {
+                navLinks.classList.remove('active');
+            }
+        });
+    });
+    </script>
 
     <!-- 页脚 -->
     <footer class="footer">

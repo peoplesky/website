@@ -10,13 +10,16 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-    <!-- 导航栏 -->
+    <!-- 修改后的导航栏 -->
     <nav class="navbar">
         <div class="navbar-left">
             <a href="#" class="logo">PeopleSky</a>
             <span class="tagline">低空数字飞行专家</span>
         </div>
-        <ul>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links">
             <li><a href="sky-for-people.html">Sky for People</a></li>
             <li><a href="about.html">关于我们</a></li>
             <li><a href="services.html">解决方案</a></li>
@@ -61,6 +64,33 @@
         <a href="#">返回顶部</a>
     </footer>
 
+    <!-- 添加导航栏响应式JavaScript -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        menuToggle.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+        });
+        
+        // 点击菜单项后自动关闭菜单
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+        
+        // 点击页面其他区域关闭菜单
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.navbar')) {
+                navLinks.classList.remove('active');
+            }
+        });
+    });
+    </script>
+
+    <!-- 保留原有的表单处理JavaScript -->
     <script>
         function handleSubmit(event) {
             event.preventDefault();

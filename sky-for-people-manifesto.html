@@ -6,16 +6,20 @@
     <meta name="description" content="Sky for People - 低空数字飞行倡议">
     <title>倡议书</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-    <!-- 导航栏 -->
+    <!-- 修改后的导航栏 -->
     <nav class="navbar">
         <div class="navbar-left">
             <a href="#" class="logo">PeopleSky</a>
             <span class="tagline">低空数字飞行专家</span>
         </div>
-        <ul>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links">
             <li><a href="sky-for-people.html" class="active">Sky for People</a></li>
             <li><a href="about.html">关于我们</a></li>
             <li><a href="services.html">核心服务</a></li>
@@ -49,7 +53,7 @@
 
     <!-- 四大技术基石 -->
     <section class="section">
-        <h2>四大技术��石</h2>
+        <h2>四大技术基石</h2>
         <ul>
             <li><strong>低空空域生态系统架构：</strong> 优化系统架构，提升动态空域管理能力。</li>
             <li><strong>协作与自主操作：</strong> 推动高度自动化与协同操作，确保任务高效执行。</li>
@@ -63,6 +67,32 @@
         <h2>携手共建未来</h2>
         <p>我们诚挚地邀请政府机构、企业、研究机构和公众携手合作，构建面向未来的低空数字飞行生态系统，实现技术创新与人类福祉的双赢。</p>
     </section>
+
+    <!-- 添加导航栏响应式JavaScript -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        menuToggle.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+        });
+        
+        // 点击菜单项后自动关闭菜单
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+        
+        // 点击页面其他区域关闭菜单
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.navbar')) {
+                navLinks.classList.remove('active');
+            }
+        });
+    });
+    </script>
 
     <!-- 页脚 -->
     <footer class="footer">
