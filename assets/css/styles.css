@@ -240,3 +240,52 @@ ul li {
 .footer a:hover {
     color: #fff;
 }
+
+
+/* 时间轴样式 */
+.timeline {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px auto;
+    max-width: 1000px;
+    padding: 0 20px;
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #0044cc;
+    z-index: 1;
+}
+
+.timeline-item {
+    position: relative;
+    z-index: 2;
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    min-width: 120px;
+}
+
+.timeline-date {
+    font-weight: bold;
+    color: #0044cc;
+    margin-bottom: 5px;
+}
+
+.timeline-desc {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .timeline {
+        flex-direction: column;
+        align-items: flex
