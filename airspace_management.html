@@ -6,6 +6,7 @@
     <meta name="description" content="PeopleSky - 智能空域管理解决方案">
     <title>智能空域管理 - PeopleSky</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
@@ -15,7 +16,10 @@
             <a href="#" class="logo">PeopleSky</a>
             <span class="tagline">低空数字飞行专家</span>
         </div>
-        <ul>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links">
             <li><a href="sky-for-people.html">Sky for People</a></li>
             <li><a href="about.html">关于我们</a></li>
             <li><a href="services.html">核心服务</a></li>
@@ -41,12 +45,38 @@
 
             <h2>客户价值</h2>
             <ul>
-                <li>提升空域资源利用率，降低运营成本。</li>
+                <li>提升空域资源利用率，降��运营成本。</li>
                 <li>减少空域冲突风险，提升运行安全性。</li>
                 <li>支持大规模多无人机同时运行的任务需求。</li>
             </ul>
         </div>
     </section>
+
+    <!-- 在页脚前添加JavaScript -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        menuToggle.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+        });
+        
+        // 点击菜单项后自动关闭菜单
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+        
+        // 点击页面其他区域关闭菜单
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.navbar')) {
+                navLinks.classList.remove('active');
+            }
+        });
+    });
+    </script>
 
     <!-- 页脚 -->
     <footer class="footer">
